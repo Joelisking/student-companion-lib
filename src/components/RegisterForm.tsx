@@ -7,9 +7,10 @@ export interface RegisterFormProps {
     password: string;
   }) => void | Promise<void>;
   errorMessage?: string;
+  isLoading?: boolean;
 }
 
-export function RegisterForm({ onSubmit, errorMessage }: RegisterFormProps) {
+export function RegisterForm({ onSubmit, errorMessage, isLoading = false }: RegisterFormProps) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -98,7 +99,9 @@ export function RegisterForm({ onSubmit, errorMessage }: RegisterFormProps) {
         )}
       </div>
       {errorMessage && <p role="alert">{errorMessage}</p>}
-      <button type="submit">Register</button>
+      <button type="submit" disabled={isLoading}>
+        {isLoading ? "Loading..." : "Register"}
+      </button>
     </form>
   );
 }

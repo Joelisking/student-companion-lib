@@ -3,9 +3,10 @@ import React, { useState } from "react";
 export interface LoginFormProps {
   onSubmit: (data: { email: string; password: string }) => void | Promise<void>;
   errorMessage?: string;
+  isLoading?: boolean;
 }
 
-export function LoginForm({ onSubmit, errorMessage }: LoginFormProps) {
+export function LoginForm({ onSubmit, errorMessage, isLoading = false }: LoginFormProps) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState<{ email?: string; password?: string }>(
@@ -71,7 +72,9 @@ export function LoginForm({ onSubmit, errorMessage }: LoginFormProps) {
         )}
       </div>
       {errorMessage && <p role="alert">{errorMessage}</p>}
-      <button type="submit">Log In</button>
+      <button type="submit" disabled={isLoading}>
+        {isLoading ? "Loading..." : "Log In"}
+      </button>
     </form>
   );
 }
