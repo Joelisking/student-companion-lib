@@ -13,3 +13,5 @@ export { SecondaryButton } from "./components/SecondaryButton";
 export type { SecondaryButtonProps } from "./components/SecondaryButton";
 export { TextInput } from "./components/TextInput";
 export type { TextInputProps } from "./components/TextInput";
+export { PasswordInput } from "./components/PasswordInput";
+export type { PasswordInputProps } from "./components/PasswordInput";
