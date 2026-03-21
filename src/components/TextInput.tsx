@@ -8,6 +8,7 @@ export interface TextInputProps {
   error?: string;
   id?: string;
   disabled?: boolean;
+  required?: boolean;
 }
 
 export function TextInput({
@@ -18,6 +19,7 @@ export function TextInput({
   error,
   id,
   disabled = false,
+  required = false,
 }: TextInputProps) {
   const inputId = id ?? label.toLowerCase().replace(/\s+/g, "-");
 
@@ -54,6 +56,9 @@ export function TextInput({
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
         disabled={disabled}
+        required={required}
+        aria-required={required || undefined}
+        aria-invalid={error ? true : undefined}
         aria-describedby={error ? `${inputId}-error` : undefined}
         style={inputStyle}
       />

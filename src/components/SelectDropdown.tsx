@@ -14,6 +14,7 @@ export interface SelectDropdownProps {
   id?: string;
   disabled?: boolean;
   placeholder?: string;
+  required?: boolean;
 }
 
 export function SelectDropdown({
@@ -25,6 +26,7 @@ export function SelectDropdown({
   id,
   disabled = false,
   placeholder,
+  required = false,
 }: SelectDropdownProps) {
   const inputId = id ?? label.toLowerCase().replace(/\s+/g, "-");
 
@@ -64,6 +66,9 @@ export function SelectDropdown({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         disabled={disabled}
+        required={required}
+        aria-required={required || undefined}
+        aria-invalid={error ? true : undefined}
         aria-describedby={error ? `${inputId}-error` : undefined}
         style={selectStyle}
       >

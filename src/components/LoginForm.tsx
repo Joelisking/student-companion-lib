@@ -66,7 +66,7 @@ export function LoginForm({ onSubmit, errorMessage, isLoading = false }: LoginFo
   };
 
   return (
-    <form onSubmit={handleSubmit} noValidate style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+    <form onSubmit={handleSubmit} noValidate aria-label="Login form" style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
       <div>
         <label htmlFor="login-email" style={labelStyle}>Email</label>
         <input
@@ -75,6 +75,8 @@ export function LoginForm({ onSubmit, errorMessage, isLoading = false }: LoginFo
           value={email}
           placeholder="you@example.com"
           onChange={(e) => setEmail(e.target.value)}
+          aria-required="true"
+          aria-invalid={errors.email ? true : undefined}
           aria-describedby={errors.email ? "login-email-error" : undefined}
           style={{ ...inputStyle, borderColor: errors.email ? "#EF4444" : "#CBD5E1" }}
         />
@@ -92,6 +94,8 @@ export function LoginForm({ onSubmit, errorMessage, isLoading = false }: LoginFo
           value={password}
           placeholder="••••••••"
           onChange={(e) => setPassword(e.target.value)}
+          aria-required="true"
+          aria-invalid={errors.password ? true : undefined}
           aria-describedby={errors.password ? "login-password-error" : undefined}
           style={{ ...inputStyle, borderColor: errors.password ? "#EF4444" : "#CBD5E1" }}
         />
@@ -109,6 +113,8 @@ export function LoginForm({ onSubmit, errorMessage, isLoading = false }: LoginFo
       <button
         type="submit"
         disabled={isLoading}
+        aria-busy={isLoading || undefined}
+        aria-label={isLoading ? "Signing in, please wait" : "Log in"}
         style={{
           width: "100%",
           padding: "11px",

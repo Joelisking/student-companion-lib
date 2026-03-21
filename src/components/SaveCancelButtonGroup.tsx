@@ -16,7 +16,7 @@ export function SaveCancelButtonGroup({
   cancelLabel = "Cancel",
 }: SaveCancelButtonGroupProps) {
   return (
-    <div style={{ display: "flex", gap: "8px", justifyContent: "flex-end" }}>
+    <div role="group" aria-label="Save or cancel actions" style={{ display: "flex", gap: "8px", justifyContent: "flex-end" }}>
       <button
         type="button"
         onClick={onCancel}
