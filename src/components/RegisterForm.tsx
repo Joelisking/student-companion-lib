@@ -78,7 +78,7 @@ export function RegisterForm({ onSubmit, errorMessage, isLoading = false }: Regi
   };
 
   return (
-    <form onSubmit={handleSubmit} noValidate style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+    <form onSubmit={handleSubmit} noValidate aria-label="Registration form" style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
       <div>
         <label htmlFor="register-name" style={labelStyle}>Name</label>
         <input
@@ -87,6 +87,8 @@ export function RegisterForm({ onSubmit, errorMessage, isLoading = false }: Regi
           value={name}
           placeholder="Your full name"
           onChange={(e) => setName(e.target.value)}
+          aria-required="true"
+          aria-invalid={errors.name ? true : undefined}
           aria-describedby={errors.name ? "register-name-error" : undefined}
           style={{ ...inputStyle, borderColor: errors.name ? "#EF4444" : "#CBD5E1" }}
         />
@@ -104,6 +106,8 @@ export function RegisterForm({ onSubmit, errorMessage, isLoading = false }: Regi
           value={email}
           placeholder="you@example.com"
           onChange={(e) => setEmail(e.target.value)}
+          aria-required="true"
+          aria-invalid={errors.email ? true : undefined}
           aria-describedby={errors.email ? "register-email-error" : undefined}
           style={{ ...inputStyle, borderColor: errors.email ? "#EF4444" : "#CBD5E1" }}
         />
@@ -121,6 +125,8 @@ export function RegisterForm({ onSubmit, errorMessage, isLoading = false }: Regi
           value={password}
           placeholder="Min. 8 characters"
           onChange={(e) => setPassword(e.target.value)}
+          aria-required="true"
+          aria-invalid={errors.password ? true : undefined}
           aria-describedby={errors.password ? "register-password-error" : undefined}
           style={{ ...inputStyle, borderColor: errors.password ? "#EF4444" : "#CBD5E1" }}
         />
@@ -138,6 +144,8 @@ export function RegisterForm({ onSubmit, errorMessage, isLoading = false }: Regi
       <button
         type="submit"
         disabled={isLoading}
+        aria-busy={isLoading || undefined}
+        aria-label={isLoading ? "Creating account, please wait" : "Create account"}
         style={{
           width: "100%",
           padding: "11px",
