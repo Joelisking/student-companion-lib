@@ -15,3 +15,5 @@ export { TextInput } from "./components/TextInput";
 export type { TextInputProps } from "./components/TextInput";
 export { PasswordInput } from "./components/PasswordInput";
 export type { PasswordInputProps } from "./components/PasswordInput";
+export { SelectDropdown } from "./components/SelectDropdown";
+export type { SelectDropdownProps, SelectOption } from "./components/SelectDropdown";
