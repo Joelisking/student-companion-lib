@@ -11,3 +11,5 @@ export { PrimaryButton } from "./components/PrimaryButton";
 export type { PrimaryButtonProps } from "./components/PrimaryButton";
 export { SecondaryButton } from "./components/SecondaryButton";
 export type { SecondaryButtonProps } from "./components/SecondaryButton";
+export { TextInput } from "./components/TextInput";
+export type { TextInputProps } from "./components/TextInput";

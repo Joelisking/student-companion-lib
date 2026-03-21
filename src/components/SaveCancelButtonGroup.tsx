@@ -16,11 +16,38 @@ export function SaveCancelButtonGroup({
   cancelLabel = "Cancel",
 }: SaveCancelButtonGroupProps) {
   return (
-    <div>
-      <button type="button" onClick={onCancel}>
+    <div style={{ display: "flex", gap: "8px", justifyContent: "flex-end" }}>
+      <button
+        type="button"
+        onClick={onCancel}
+        style={{
+          padding: "8px 16px",
+          borderRadius: "8px",
+          border: "1px solid #CBD5E1",
+          background: "#fff",
+          color: "#475569",
+          fontSize: "14px",
+          fontWeight: 500,
+          cursor: "pointer",
+        }}
+      >
         {cancelLabel}
       </button>
-      <button type="button" onClick={onSave} disabled={disabled}>
+      <button
+        type="button"
+        onClick={onSave}
+        disabled={disabled}
+        style={{
+          padding: "8px 16px",
+          borderRadius: "8px",
+          border: "none",
+          background: disabled ? "#93C5FD" : "#2563EB",
+          color: "#fff",
+          fontSize: "14px",
+          fontWeight: 600,
+          cursor: disabled ? "not-allowed" : "pointer",
+        }}
+      >
         {saveLabel}
       </button>
     </div>
