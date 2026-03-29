@@ -19,3 +19,5 @@ export { SelectDropdown } from "./components/SelectDropdown";
 export type { SelectDropdownProps, SelectOption } from "./components/SelectDropdown";
 export { Toast } from "./components/Toast";
 export type { ToastProps, ToastType } from "./components/Toast";
+export { Banner } from "./components/Banner";
+export type { BannerProps, BannerType } from "./components/Banner";
