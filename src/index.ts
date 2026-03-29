@@ -17,3 +17,5 @@ export { PasswordInput } from "./components/PasswordInput";
 export type { PasswordInputProps } from "./components/PasswordInput";
 export { SelectDropdown } from "./components/SelectDropdown";
 export type { SelectDropdownProps, SelectOption } from "./components/SelectDropdown";
+export { Toast } from "./components/Toast";
+export type { ToastProps, ToastType } from "./components/Toast";
