@@ -21,3 +21,5 @@ export { Toast } from "./components/Toast";
 export type { ToastProps, ToastType } from "./components/Toast";
 export { Banner } from "./components/Banner";
 export type { BannerProps, BannerType } from "./components/Banner";
+export { Badge } from "./components/Badge";
+export type { BadgeProps, BadgeVariant } from "./components/Badge";
