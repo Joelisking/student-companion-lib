@@ -25,3 +25,5 @@ export { Badge } from "./components/Badge";
 export type { BadgeProps, BadgeVariant } from "./components/Badge";
 export { Card } from "./components/Card";
 export type { CardProps } from "./components/Card";
+export { StatCard } from "./components/StatCard";
+export type { StatCardProps, StatCardTrend } from "./components/StatCard";
