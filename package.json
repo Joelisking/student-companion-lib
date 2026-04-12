@@ -1,6 +1,6 @@
 {
   "name": "@joel_ak/student-companion-lib",
-  "version": "2.5.0",
+  "version": "2.6.0",
   "description": "Shared UI component library for the Student Companion platform",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

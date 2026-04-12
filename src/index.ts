@@ -27,3 +27,5 @@ export { Card } from "./components/Card";
 export type { CardProps } from "./components/Card";
 export { StatCard } from "./components/StatCard";
 export type { StatCardProps, StatCardTrend } from "./components/StatCard";
+export { EmptyState } from "./components/EmptyState";
+export type { EmptyStateProps } from "./components/EmptyState";
