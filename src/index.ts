@@ -29,3 +29,5 @@ export { StatCard } from "./components/StatCard";
 export type { StatCardProps, StatCardTrend } from "./components/StatCard";
 export { EmptyState } from "./components/EmptyState";
 export type { EmptyStateProps } from "./components/EmptyState";
+export { Modal } from "./components/Modal";
+export type { ModalProps } from "./components/Modal";
