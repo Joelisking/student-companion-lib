@@ -23,3 +23,5 @@ export { Banner } from "./components/Banner";
 export type { BannerProps, BannerType } from "./components/Banner";
 export { Badge } from "./components/Badge";
 export type { BadgeProps, BadgeVariant } from "./components/Badge";
+export { Card } from "./components/Card";
+export type { CardProps } from "./components/Card";
