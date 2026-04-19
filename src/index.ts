@@ -35,3 +35,5 @@ export { AvatarInitials } from "./components/AvatarInitials";
 export type { AvatarInitialsProps } from "./components/AvatarInitials";
 export { Tabs } from "./components/Tabs";
 export type { TabsProps, TabItem } from "./components/Tabs";
+export { ProgressBar } from "./components/ProgressBar";
+export type { ProgressBarProps } from "./components/ProgressBar";
