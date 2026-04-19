@@ -33,3 +33,5 @@ export { Modal } from "./components/Modal";
 export type { ModalProps } from "./components/Modal";
 export { AvatarInitials } from "./components/AvatarInitials";
 export type { AvatarInitialsProps } from "./components/AvatarInitials";
+export { Tabs } from "./components/Tabs";
+export type { TabsProps, TabItem } from "./components/Tabs";
