@@ -31,3 +31,5 @@ export { EmptyState } from "./components/EmptyState";
 export type { EmptyStateProps } from "./components/EmptyState";
 export { Modal } from "./components/Modal";
 export type { ModalProps } from "./components/Modal";
+export { AvatarInitials } from "./components/AvatarInitials";
+export type { AvatarInitialsProps } from "./components/AvatarInitials";
