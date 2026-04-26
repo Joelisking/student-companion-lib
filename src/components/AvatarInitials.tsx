@@ -4,6 +4,7 @@ export interface AvatarInitialsProps {
   name: string;
   size?: "sm" | "md" | "lg";
   color?: string;
+  ariaLabel?: string;
 }
 
 const sizes = {
@@ -18,11 +19,12 @@ function getInitials(name: string): string {
   return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
 }
 
-export function AvatarInitials({ name, size = "md", color = "#4f46e5" }: AvatarInitialsProps) {
+export function AvatarInitials({ name, size = "md", color = "#4f46e5", ariaLabel }: AvatarInitialsProps) {
   const { box, font } = sizes[size];
   return (
     <div
-      aria-label={name}
+      role="img"
+      aria-label={ariaLabel ?? name}
       style={{
         width: box,
         height: box,
